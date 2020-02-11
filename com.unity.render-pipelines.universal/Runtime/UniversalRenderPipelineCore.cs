@@ -240,6 +240,9 @@ namespace UnityEngine.Rendering.Universal
 
                     if (id.Contains("Windows Mixed Reality Display"))
                         return true;
+
+                    if (!XR.WSA.HolographicSettings.IsDisplayOpaque)
+                        return true;
                 }
             }
 #endif
